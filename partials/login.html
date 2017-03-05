@@ -1,0 +1,40 @@
+<script>
+    $(window).ready(function(){
+        document.getElementsByTagName('section')[0].style.height =  document.getElementsByTagName("BODY")[0].clientHeight -50;
+
+    });
+    $(window).resize(function(){
+        document.getElementsByTagName('section')[0].style.height = document.getElementsByTagName("BODY")[0].clientHeight -50;
+    });
+</script>
+
+
+<section class="sectionBackGround" style="overflow: auto">
+
+    <div class="col-sm-5 topMargin">
+        <div class="panel panel-primary panel-styling">
+            <div class="panel-heading pageHeader">
+                <h3 class="panel-title">Login to Your Existing Account</h3>
+            </div>
+            <div class="panel-body">
+                <div class="alert alert-danger" role="alert" ng-if="isError">
+                    <span class="glyphicon glyphicon-exclamation-sign" style="padding-left: 10px" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    <span ng-bind="errMsg"></span>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="input-group bottom-margin">
+                    <span class="input-group-addon border-left-radius glyphicon glyphicon-user static-pos"></span>
+                    <input type="text" class="form-control border-right-radius" ng-model="userName" placeholder="Username" required="required"/>
+                </div>
+                <div class="input-group bottom-margin">
+                    <span class="input-group-addon border-left-radius glyphicon glyphicon-lock static-pos"></span>
+                    <input type="password" class="form-control border-right-radius" ng-model="userPassword" placeholder="password" required="required"/>
+                </div>
+                <hr style="background: black">
+                <button class="login-button pull-right bottom-margin" type="button" ng-click="submit();">Login</button>
+            </div>
+        </div>
+    </div>
+</section>

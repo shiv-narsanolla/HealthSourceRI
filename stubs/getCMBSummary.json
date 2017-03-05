@@ -1,0 +1,12 @@
+{
+    "benefitName": "SNAP",
+    "redeterminationDate": 1475734031243,
+    "benefitSummaryOfHouseHoldsList": [
+        {
+            "houseHoldId": "8198980",
+            "memberName": "SSP User",
+            "statusOfBenefit": "Approved",
+            "benefitSummaryLink": "/CMBDetail/SNAP/8198980"
+        }
+    ]
+}
