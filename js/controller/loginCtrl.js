@@ -10,6 +10,7 @@ app.controller("loginCtrl",["$scope", "$rootScope", "$log", "$location", "myServ
         $scope.current = SessionKeeper.read();
     }
     if(angular.isDefined($scope.current) && angular.isDefined($scope.current.loginData)){
+        $rootScope.isAuthenticated = true;
         $location.path("/profile");
     }
     var validateUser = function(){
