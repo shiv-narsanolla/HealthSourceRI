@@ -1,9 +1,10 @@
-app.controller("loginCtrl",["$scope", "$log", "$location", "myServices", "SessionKeeper" ,function($scope, $log, $location, myServices, SessionKeeper){
+app.controller("loginCtrl",["$scope", "$rootScope", "$log", "$location", "myServices", "SessionKeeper" ,function($scope, $rootScope, $log, $location, myServices, SessionKeeper){
 
     $scope.userName = "";
     $scope.userPassword = "";
     $scope.isError = false;
     $scope.errMsg = "";
+    $rootScope.isAuthenticated = false;
 
     if(SessionKeeper.read()){
         $scope.current = SessionKeeper.read();
@@ -41,6 +42,7 @@ app.controller("loginCtrl",["$scope", "$log", "$location", "myServices", "Sessio
                             details : response.data
                         }
                     };
+                    $rootScope.isAuthenticated = true;
                     SessionKeeper.save($scope.current);
                     $location.path("/profile");
 
