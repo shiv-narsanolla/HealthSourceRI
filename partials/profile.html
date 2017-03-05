@@ -1,0 +1,61 @@
+<script>
+    $(window).ready(function(){
+        document.getElementsByTagName('section')[0].style.height =  document.getElementsByTagName("BODY")[0].clientHeight -50;
+
+    });
+    $(window).resize(function(){
+        document.getElementsByTagName('section')[0].style.height = document.getElementsByTagName("BODY")[0].clientHeight -50;
+    });
+</script>
+<section class="sectionBackGround" style="overflow: auto">
+    <div style="position: relative">
+        <div class="container-fluid" style="margin-top: 20px;background: rgba(256,256,256,0.6)">
+            <h2 style="font-size: 14px;">Welcome <strong ng-bind="userName"></strong></h2>
+        </div>
+        <div class="marquee">
+            <strong>Upcoming Events :</strong><marquee> 02/28/2017 - Blue Cross & Blue Shield of Rhode Island Medicare 101 Educational Sessions
+            Middletown.</marquee>
+        </div>
+
+        <div>
+            <ul class="row profile-nav info profile-section-margin" style="margin-left: -40px;">
+                <li class="profile-details">
+                    <a href="#/myBenefits">
+                        <img class="image-icons" src="/images/iconsLineSet-45-128.png">
+                        <div >Benefits</div>
+                    </a>
+                </li>
+                <li class="profile-details">
+                    <a href="#/noPage">
+                        <img class="image-icons" src="/images/family.png">
+                        <div >My family</div>
+                    </a>
+                </li>
+                <li class="profile-details">
+                    <a href="#/noPage">
+                        <img class="image-icons" src="/images/avatar-128.png">
+                        <div >Account info</div>
+                    </a>
+                </li>
+                <li class="profile-details">
+                    <a href="#/noPage">
+                        <img class="image-icons" src="/images/notice.png">
+                        <div >Notices</div>
+                    </a>
+                </li>
+                <li class="profile-details">
+                    <a href="#/noPage">
+                        <img class="image-icons" src="/images/maybe-17-128.png">
+                        <div >TO DO</div>
+                    </a>
+                </li>
+                <li class="profile-details">
+                    <a href="#/noPage">
+                        <img class="image-icons" src="/images/Admission_Form-512.png">
+                        <div >Application Status</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
