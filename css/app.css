@@ -104,7 +104,7 @@ body {
 }
 
 .sectionBackGround{
-    background: url("/images/HSRI1.jpg") no-repeat fixed center;
+    background: url("images/HSRI1.jpg") no-repeat fixed center;
     background-size: 100% 100%;
     width: 100%;
     overflow: hidden;
