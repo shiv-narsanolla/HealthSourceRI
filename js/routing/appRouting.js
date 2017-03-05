@@ -20,6 +20,9 @@ app.config(['$locationProvider','$routeProvider', function($locationProvider, $r
         .when('/noPage',{
             templateUrl: 'partials/errorPage.html'
         })
+        .when('/contactUs',{
+            templateUrl: 'partials/contactUs.html'
+        })
         .otherwise({
             redirectTo : '/login'
         })
