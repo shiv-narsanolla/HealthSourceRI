@@ -19,9 +19,25 @@
         <script src="js/controller/loginCtrl.js"></script>
         <script src="js/controller/profileCtrl.js"></script>
         <script src="js/controller/programsCtrl.js"></script>
+        <script>
+            function clickNav() {
+                if(document.getElementById("mySidenav").style.width == "0px" || document.getElementById("mySidenav").style.width == ""){
+                    document.getElementById("mySidenav").style.width = "200px";
+                }else{
+                    closeNav();
+                }
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
     </head>
     <body ng-app="myApp" class="bodyBackground">
         <header class="container-fluid globalNav">
+            <span class="pull-right" onclick="clickNav()" ng-if="isAuthenticated">
+                <img src="images/menu-512.png" class="headerImage" style="width: 25px; height: 30px; margin-right: -10px;">
+            </span>
             <div class="pull-left">
                 <a href="http://healthsourceri.com/">
                     <img src="images/HEALTHSOURCE_RI_LOGO_0.jpg" class="headerImage" >
@@ -32,6 +48,15 @@
                 <span class="header-sub">YOUR HEALTH. YOUR WAY.</span>
             </div>
         </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#/profile" onclick="closeNav()">Profile</a>
+            <a href="#/myBenefits" onclick="closeNav()">Benefits</a>
+            <a href="#/programs" onclick="closeNav()">Programs</a>
+            <a href="#/ContactUs" onclick="closeNav()">Contact Us</a>
+        </div>
+
         <div class="row"></div>
         <div ng-view>
         </div>
